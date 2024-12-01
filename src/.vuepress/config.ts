@@ -3,7 +3,7 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/tshell-docs",
   port: '8080', //端口号
   lang: "zh-CN",
   title: "T-Shell",
