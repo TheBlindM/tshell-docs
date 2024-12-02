@@ -35,3 +35,15 @@ star: true
 命令提示 分为 历史命令提示，目录提示，快捷命令提示。点击提示 可动态设置
 
 <img src="/assets/image/prompt-cmd.png"/>
+
+### 历史命令
+
+ `Ctrl-R` 可显示历史命令
+
+ <img src="/assets/image/history-cmd.png"/>
+
+### 快捷命令
+支持 # 注释
+
+ <img src="/assets/image/add-kjml.png"/>
+ <img src="/assets/image/kjml.png"/>

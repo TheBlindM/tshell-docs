@@ -35,6 +35,7 @@ highlights:
 
       - title: 本地终端
         icon: fa-solid fa-terminal
+        details: 集成的命令行工具
 
        
 
