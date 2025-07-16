@@ -10,7 +10,7 @@ order: 1
 # 设置作者
 author: TheBlind
 # 设置写作时间
-date: 2024-12-01
+date: 2025-07-15
 # 一个页面可以有多个分类
 category:
   - 使用指南
@@ -54,5 +54,13 @@ star: true
 ### 6.会话连接
 **全屏广播**
 - `Ctrl-ALT-Shift-I`
+
+### 7.AI命令建议
+在命令行输入 **？？问题** 然后回车即可
+<img src="/assets/image/ai-cmd.gif"/>
+
+### 8.AI翻译
+在终端选中词，即可翻译
+<img src="/assets/image/ai-translation.gif"/>
 
 
