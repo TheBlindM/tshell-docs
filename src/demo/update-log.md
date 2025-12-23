@@ -10,7 +10,7 @@ order: 10
 # 设置作者
 author: TheBlind
 # 设置写作时间
-date: 2025-06-06
+date: 2025-12-23
 # 一个页面可以有多个分类
 category:
   - 使用指南
@@ -24,8 +24,65 @@ sticky: true
 star: true
 
 ---
-
 ## 更新日志
+### V2.0.0
+    ✨新增：分屏
+    ✨新增：docker
+    ✨新增：telnet
+    ✨更新：优化了UI
+    🐶修复: 无sftp的服务器，无法打开终端等BUG
+
+#### 下载
+
+请选择适合您操作系统的版本下载：
+
+* **macOS:**
+  * [下载 macOS ARM版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.0/T-Shell_2.0.0_aarch64.dmg)
+  * [下载 macOS X86版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.0/T-Shell_2.0.0_x64.dmg)
+* **Linux:**
+  * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.0/T-Shell_2.0.0_amd64.deb)
+* **Windows:**
+  * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.0/T-Shell_2.0.0_x64_en-US.msi)
+  * 
+
+### V1.1.7
+    ✨更新: 优化 ai建议和翻译的交互
+#### 下载
+
+请选择适合您操作系统的版本下载：
+
+* **macOS:**
+  * [下载 macOS ARM版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.1.7/T-Shell_1.1.7_aarch64.dmg)
+  * [下载 macOS X86版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.1.7/T-Shell_1.1.7_x64.dmg)
+* **Linux:**
+  * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.1.7/T-Shell_1.1.7_amd64.deb)
+* **Windows:**
+  * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.1.7/T-Shell_1.1.7_x64_en-US.msi)
+
+
+### V1.1.6
+    ✨更新: 支持exc关闭 ai命令建议
+    ✨更新: 同会话下 复制文件直接使用cp 
+    ✨更新: 快捷命令支持分词检索 
+    ✨更新: 优化弱网和内网
+    ✨更新: 优化高亮
+    🐶修复: group 下没有会话时，group没有删除 
+    🐶修复: 全局面板容易误触 
+    🐶修复: 已删除的会话，更新后还会存在
+    🐶修复: 用户信息过期
+#### 下载
+
+请选择适合您操作系统的版本下载：
+
+* **macOS:**
+  * [下载 macOS ARM版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.1.6/T-Shell_1.1.6_aarch64.dmg)
+  * [下载 macOS X86版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.1.6/T-Shell_1.1.6_x64.dmg)
+* **Linux:**
+  * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.1.6/T-Shell_1.1.6_amd64.deb)
+* **Windows:**
+  * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.1.6/T-Shell_1.1.6_x64_en-US.msi)
+
+  
 ### V1.1.5
     ✨新增: 自动同步数据
     ✨新增: 命令智能框选（beta）
