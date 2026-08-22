@@ -10,7 +10,7 @@ order: 10
 # 设置作者
 author: TheBlind
 # 设置写作时间
-date: 2025-12-23
+date: 2025-1-27
 # 一个页面可以有多个分类
 category:
   - 使用指南
@@ -25,6 +25,46 @@ star: true
 
 ---
 ## 更新日志
+### V2.0.2
+    ✨新增: RDP
+    ✨新增: 右键tab 直接编辑会话
+    ✨更新: 优化命令提示
+    ✨更新: 优化延迟检测
+    🐶修复: 终端中粘贴文本颜色不明显
+
+#### 下载
+
+请选择适合您操作系统的版本下载：
+
+* **macOS:**
+  * [下载 macOS ARM版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.2/T-Shell_2.0.2_aarch64.dmg)
+  * [下载 macOS X86版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.2/T-Shell_2.0.2_x64.dmg)
+* **Linux:**
+  * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.2/T-Shell_2.0.2_amd64.deb)
+* **Windows:**
+  * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.2/T-Shell_2.0.2_x64_en-US.msi)
+  
+
+### V2.0.1
+    ✨新增: 代理支持用户名密码
+    ✨更新: init脚本和监控脚本的上传逻辑
+    🐶修复: 脚本换行符异常
+    🐶修复: 主题修改时,触发循环调用
+    🐶修复: windows下自动更新检测失效
+    🐶修复: docker管理打开异常
+
+#### 下载
+
+请选择适合您操作系统的版本下载：
+
+* **macOS:**
+  * [下载 macOS ARM版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.1/T-Shell_2.0.1_aarch64.dmg)
+  * [下载 macOS X86版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.1/T-Shell_2.0.1_x64.dmg)
+* **Linux:**
+  * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.1/T-Shell_2.0.1_amd64.deb)
+* **Windows:**
+  * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.1/T-Shell_2.0.1_x64_en-US.msi)
+  * 
 ### V2.0.0
     ✨新增：分屏
     ✨新增：浅色主题
@@ -44,7 +84,7 @@ star: true
   * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.0/T-Shell_2.0.0_amd64.deb)
 * **Windows:**
   * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.0/T-Shell_2.0.0_x64_en-US.msi)
-  * 
+  
 
 ### V1.1.7
     ✨更新: 优化 ai建议和翻译的交互
