@@ -16,6 +16,10 @@ actions:
     link: ./demo/
     type: primary
 
+  - text: MCP 接入
+    icon: plug
+    link: ./demo/mcp.html
+
 
 highlights:
 #不仅是ssh客户端,还是功能强大的开发,运维工具,充分满足开发,运维需求.特色功能:云端同步,本地化命令输入框,支持自动补全,命令历史,自定义命令参数,文本高亮
@@ -48,6 +52,10 @@ highlights:
         icon: fa-solid fa-pen-to-square
         details: 支持本地和内置的编辑器，对文件进行操作
 
+      - title: MCP 集成
+        icon: fa-solid fa-plug
+        details: 通过本地 stdio MCP，让 AI 客户端读取会话、执行 SSH 命令并操作共享终端
+        link: ./demo/mcp.html
+
 copyright:  false
 footer:  © 2024 皖ICP备2024050803号-1
-
