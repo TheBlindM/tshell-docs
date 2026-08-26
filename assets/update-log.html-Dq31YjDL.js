@@ -1,4 +1,4 @@
-import{_ as l}from"./plugin-vue_export-helper-DlAUqK2U.js";import{o as r,c as n,b as a}from"./app-CgGpJKCp.js";const t={};function o(s,e){return r(),n("div",null,e[0]||(e[0]=[a(`<h2 id="更新日志" tabindex="-1"><a class="header-anchor" href="#更新日志"><span>更新日志</span></a></h2><h3 id="v2-0-2" tabindex="-1"><a class="header-anchor" href="#v2-0-2"><span>V2.0.2</span></a></h3><pre><code>✨新增: RDP
+import{_ as l}from"./plugin-vue_export-helper-DlAUqK2U.js";import{o as r,c as n,b as a}from"./app-DwGY9CCn.js";const t={};function o(s,e){return r(),n("div",null,e[0]||(e[0]=[a(`<h2 id="更新日志" tabindex="-1"><a class="header-anchor" href="#更新日志"><span>更新日志</span></a></h2><h3 id="v2-0-2" tabindex="-1"><a class="header-anchor" href="#v2-0-2"><span>V2.0.2</span></a></h3><pre><code>✨新增: RDP
 ✨新增: 右键tab 直接编辑会话
 ✨更新: 优化命令提示
 ✨更新: 优化延迟检测
