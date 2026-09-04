@@ -54,7 +54,7 @@ highlights:
 
       - title: MCP 集成
         icon: fa-solid fa-plug
-        details: 通过本地 stdio MCP，让 AI 客户端读取会话、执行 SSH 命令并操作共享终端
+        details: 通过本地 stdio MCP，让 AI 客户端读取会话、执行 SSH 命令、传输文件并操作共享终端
         link: ./demo/mcp.html
 
 copyright:  false

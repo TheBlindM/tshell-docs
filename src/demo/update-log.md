@@ -10,7 +10,7 @@ order: 10
 # 设置作者
 author: TheBlind
 # 设置写作时间
-date: 2025-1-27
+date: 2026-09-04
 # 一个页面可以有多个分类
 category:
   - 使用指南
@@ -25,6 +25,27 @@ star: true
 
 ---
 ## 更新日志
+### V2.0.3
+    ✨新增: MCP 功能，支持 agent 调用
+    ✨更新: 优化 SSH 底部工具栏布局，支持树展示
+    ✨更新: 会话搜索支持名称/IP 包含匹配，并增加搜索结果高亮
+    🐶修复: SFTP 无法拖动上传
+    🐶修复: macOS 下终端按键偶发重复或无法输入
+    🐶修复: 终端离线时仍持续进行资源轮询
+
+#### 下载
+
+请选择适合您操作系统的版本下载：
+
+* **macOS:**
+  * [下载 macOS ARM版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.3/T-Shell_2.0.3_aarch64.dmg)
+  * [下载 macOS X86版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.3/T-Shell_2.0.3_x64.dmg)
+* **Linux:**
+  * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.3/T-Shell_2.0.3_amd64.deb)
+* **Windows:**
+  * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.3/T-Shell_2.0.3_x64_en-US.msi)
+
+
 ### V2.0.2
     ✨新增: RDP
     ✨新增: 右键tab 直接编辑会话
@@ -281,5 +302,3 @@ star: true
     * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.0.8/T-Shell_1.0.8_amd64.deb)
 * **Windows:**
     * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v1.0.8/T-Shell_1.0.8_x64_en-US.msi)
-
-

@@ -15,26 +15,28 @@ star: true
 
 # T-Shell MCP 集成
 
-T-Shell 安装包已经内置本地 `stdio` MCP Server。支持 MCP 的 AI 客户端可以通过它读取 T-Shell 中保存的会话，并在你明确开启权限后执行 SSH 命令或操作 T-Shell GUI 中已经打开的共享终端。
+T-Shell 安装包已经内置本地 `stdio` MCP Server。支持 MCP 的 AI 客户端可以通过它读取 T-Shell 中保存的会话，并在你明确开启权限后执行 SSH 命令、上传或下载文件，以及操作 T-Shell GUI 中已经打开的共享终端。
 
 本文以 macOS 和 Codex 为例。其他支持本地 `stdio` MCP 的客户端可以使用同一个可执行文件。
 
 ## 功能与工具
 
-完成本文的完整配置后，T-Shell MCP 会提供以下 8 个工具：
+完成本文的完整配置后，T-Shell MCP 会提供以下 10 个工具：
 
 | 工具 | 用途 | 所需条件 |
 | --- | --- | --- |
 | `tshell_list_sessions` | 列出 T-Shell 中保存的会话 | 无额外权限开关 |
 | `tshell_get_session` | 读取指定会话的信息 | 无额外权限开关 |
 | `tshell_exec` | 通过保存的会话执行独立命令 | `--allow-exec`，目前仅支持 SSH |
+| `tshell_upload_file` | 将本地文件上传到 SSH 主机 | `--allow-file-upload`，本地文件须位于可读根目录中 |
+| `tshell_download_file` | 从 SSH 主机下载文件到本地 | `--allow-file-download`，目标位置须位于可写根目录中 |
 | `tshell_shared_list_terminals` | 列出 GUI 中已经打开的共享终端 | T-Shell GUI 正在运行 |
 | `tshell_shared_read_terminal` | 读取共享终端当前内容 | 目标终端已经打开 |
 | `tshell_shared_read_tail` | 读取共享终端末尾内容 | 目标终端已经打开 |
 | `tshell_shared_send_input` | 向共享终端发送输入 | `--allow-shared-input` |
 | `tshell_shared_resize_terminal` | 调整共享终端尺寸 | `--allow-shared-input` |
 
-`--allow-shared-input` 可以操作 T-Shell GUI 中已经打开的 Telnet 终端。`tshell_exec` 使用独立的命令执行通道，目前仅支持 SSH，不会继承 GUI 终端当前的目录、环境变量或后台任务。
+`--allow-read-root` 和 `--allow-write-root` 分别限定 MCP 可以读取和写入的本地目录，防止文件传输访问未授权路径。`--allow-shared-input` 可以操作 T-Shell GUI 中已经打开的 Telnet 终端。`tshell_exec` 使用独立的命令执行通道，目前仅支持 SSH，不会继承 GUI 终端当前的目录、环境变量或后台任务。
 
 ## 1. 验证安装包中的 MCP Server
 
@@ -66,14 +68,18 @@ command = "/Applications/T-Shell.app/Contents/MacOS/tshell-mcp"
 args = [
   "--allow-exec",
   "--allow-shared-input",
-  "--data-dir",
-  "/Users/your-name/Library/Application Support/t-shell"
+  "--allow-file-upload",
+  "--allow-read-root",
+  "/Users/your-name/Documents",
+  "--allow-file-download",
+  "--allow-write-root",
+  "/Users/your-name/Downloads"
 ]
 ```
 
-请把 `your-name` 替换为当前 macOS 用户名。`--data-dir` 后面传入的是包含 `local.db` 的 T-Shell 数据目录，不是数据库文件本身。
+请把 `your-name` 替换为当前 macOS 用户名，也可以把两个目录改成你希望授权的绝对路径。示例允许 MCP 从 `Documents` 读取待上传文件，并把下载文件写入 `Downloads`。
 
-这份配置同时开启 SSH 命令执行和共享终端输入。如果只需要读取会话与终端，请删除 `--allow-exec` 和 `--allow-shared-input`，保留 `--data-dir` 配置即可。
+这份配置同时开启 SSH 命令执行、共享终端输入和文件传输。如果不需要某项写能力，请删除对应的权限开关。`--allow-read-root` 与 `--allow-write-root` 可以重复填写，以授权多个目录。
 
 ### 在 Codex 安装界面填写
 
@@ -90,8 +96,12 @@ args = [
 ```text
 --allow-exec
 --allow-shared-input
---data-dir
-/Users/your-name/Library/Application Support/t-shell
+--allow-file-upload
+--allow-read-root
+/Users/your-name/Documents
+--allow-file-download
+--allow-write-root
+/Users/your-name/Downloads
 ```
 
 同样需要把 `your-name` 替换为当前 macOS 用户名。
@@ -108,8 +118,12 @@ args = [
       "args": [
         "--allow-exec",
         "--allow-shared-input",
-        "--data-dir",
-        "/Users/your-name/Library/Application Support/t-shell"
+        "--allow-file-upload",
+        "--allow-read-root",
+        "/Users/your-name/Documents",
+        "--allow-file-download",
+        "--allow-write-root",
+        "/Users/your-name/Downloads"
       ]
     }
   }
@@ -128,12 +142,14 @@ args = [
 codex mcp list
 ```
 
-在 Codex 终端界面中也可以使用 `/mcp` 查看当前连接的 Server。确认 `tshell` 已加载后，再检查是否暴露了全部 8 个工具：
+在 Codex 终端界面中也可以使用 `/mcp` 查看当前连接的 Server。确认 `tshell` 已加载后，再检查是否暴露了全部 10 个工具：
 
 ```text
 tshell_list_sessions
 tshell_get_session
 tshell_exec
+tshell_upload_file
+tshell_download_file
 tshell_shared_list_terminals
 tshell_shared_read_terminal
 tshell_shared_read_tail
@@ -167,16 +183,22 @@ command = "/Applications/T-Shell.app/Contents/MacOS/tshell-mcp"
 args = [
   "--allow-exec",
   "--allow-shared-input",
-  "--data-dir",
-  "/Users/<你的用户名>/Library/Application Support/t-shell"
+  "--allow-file-upload",
+  "--allow-read-root",
+  "/Users/<你的用户名>/Documents",
+  "--allow-file-download",
+  "--allow-write-root",
+  "/Users/<你的用户名>/Downloads"
 ]
 
 4. 不要传递主机地址、密码、私钥或登录凭据。
 5. 配置完成后提醒我重启 Codex 或新建任务。
-6. 重启后验证 tshell MCP 是否暴露以下 8 个工具：
+6. 重启后验证 tshell MCP 是否暴露以下 10 个工具：
    tshell_list_sessions
    tshell_get_session
    tshell_exec
+   tshell_upload_file
+   tshell_download_file
    tshell_shared_list_terminals
    tshell_shared_read_terminal
    tshell_shared_read_tail
@@ -190,6 +212,9 @@ args = [
 - 不要在 MCP 配置或命令参数中传递主机地址、用户名、密码、私钥或其他登录凭据。`tshell-mcp` 会读取 T-Shell 已保存的会话。
 - `--allow-exec` 允许 AI 客户端在远程 SSH 主机上执行命令；不需要时应移除此参数。
 - `--allow-shared-input` 允许 AI 客户端改变 GUI 终端状态，包括向已经打开的 Telnet 终端发送输入；不需要时应移除此参数。
+- `--allow-file-upload` 开启上传工具；`--allow-read-root` 限定允许读取的本地根目录。两者必须配合使用。
+- `--allow-file-download` 开启下载工具；`--allow-write-root` 限定允许写入的本地根目录。两者必须配合使用。
+- 读写根目录应尽量具体，不要直接授权整个用户目录或磁盘根目录。
 - 首次连接未知 SSH 主机或主机密钥发生变化时，应在 T-Shell GUI 中人工确认。
 - 启用写能力后，先要求 AI 读取会话或终端状态，再明确指定要执行或发送的内容。
 
@@ -210,6 +235,10 @@ args = [
 ### 无法读取或操作共享终端
 
 确认 T-Shell GUI 正在运行，并且目标终端已经打开。发送输入或调整终端大小还需要 `--allow-shared-input`。
+
+### 无法上传或下载文件
+
+上传需要同时配置 `--allow-file-upload` 和至少一个 `--allow-read-root`；待上传文件必须位于授权目录中。下载需要同时配置 `--allow-file-download` 和至少一个 `--allow-write-root`；本地目标路径必须位于授权目录中。
 
 ### 修改配置后没有生效
 
