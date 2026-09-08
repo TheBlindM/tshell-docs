@@ -10,7 +10,7 @@ order: 10
 # 设置作者
 author: TheBlind
 # 设置写作时间
-date: 2026-09-04
+date: 2026-09-08
 # 一个页面可以有多个分类
 category:
   - 使用指南
@@ -25,6 +25,25 @@ star: true
 
 ---
 ## 更新日志
+### V2.0.4
+    ✨新增: SFTP 右键支持复制路径
+    🐶修复: Windows 下资源监控显示失败
+
+发布时间：2026-09-08 19:00（UTC+8）
+
+#### 下载
+
+请选择适合您操作系统的版本下载：
+
+* **macOS:**
+  * [下载 macOS ARM版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.4/T-Shell_2.0.4_aarch64.dmg)
+  * [下载 macOS X86版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.4/T-Shell_2.0.4_x64.dmg)
+* **Linux:**
+  * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.4/T-Shell_2.0.4_amd64.deb)
+* **Windows:**
+  * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.4/T-Shell_2.0.4_x64_en-US.msi)
+
+
 ### V2.0.3
     ✨新增: MCP 功能，支持 agent 调用
     ✨更新: 优化 SSH 底部工具栏布局，支持树展示
