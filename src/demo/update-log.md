@@ -10,7 +10,7 @@ order: 10
 # 设置作者
 author: TheBlind
 # 设置写作时间
-date: 2026-09-08
+date: 2026-11-03
 # 一个页面可以有多个分类
 category:
   - 使用指南
@@ -25,6 +25,25 @@ star: true
 
 ---
 ## 更新日志
+### V2.0.5
+    🐶修复: 部分 SSH 服务器提示 No common Kex algorithm 无法连接
+    ✨新增: 图标随安装包离线加载，首次启动不再依赖 Iconify API
+
+发布时间：2026-11-03 16:36（UTC+8）
+
+#### 下载
+
+请选择适合您操作系统的版本下载：
+
+* **macOS:**
+  * [下载 macOS ARM版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.5/T-Shell_2.0.5_aarch64.dmg)
+  * [下载 macOS X86版本](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.5/T-Shell_2.0.5_x64.dmg)
+* **Linux:**
+  * [下载 Linux (通用)](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.5/T-Shell_2.0.5_amd64.deb)
+* **Windows:**
+  * [下载 Windows](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.5/T-Shell_2.0.5_x64_en-US.msi)
+
+
 ### V2.0.4
     ✨新增: SFTP 右键支持复制路径
     🐶修复: Windows 下资源监控显示失败
