@@ -25,6 +25,25 @@ star: true
 
 ---
 ## 更新日志
+### V2.0.6
+    🐶修复: SSH 密钥未配置时误显示「密钥已加密保存」、无法上传的问题。
+    🐶修复: 修复使用直接上传的私钥或已保存凭证时，「测试连接」未能正确读取私钥的问题。
+
+发布时间：2026-11-14 14:52（UTC+8）
+
+#### 下载
+
+请选择适合您操作系统的版本下载：
+
+* **macOS:**
+  * [下载 macOS Apple 芯片版](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.6/T-Shell_2.0.6_aarch64.dmg)
+  * [下载 macOS Intel 版](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.6/T-Shell_2.0.6_x64.dmg)
+* **Linux:**
+  * [下载 Linux (.deb)](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.6/T-Shell_2.0.6_amd64.deb)
+* **Windows:**
+  * [下载 Windows (.msi)](https://gitee.com/The-Blind/t-shell-store/releases/download/v2.0.6/T-Shell_2.0.6_x64_en-US.msi)
+
+
 ### V2.0.5
     🐶修复: 部分 SSH 服务器提示 No common Kex algorithm 无法连接
     ✨新增: 图标随安装包离线加载，首次启动不再依赖 Iconify API
